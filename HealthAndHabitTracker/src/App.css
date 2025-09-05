@@ -1,0 +1,248 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body: center wrapper */
+body {
+    background: linear-gradient(135deg, #FFDEE9, #B5FFFC, #E0C3FC);
+    color: #212121;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: linear-gradient(135deg, #121212, #1E1E1E);
+    color: #E0E0E0;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Dark mode wrapper */
+body.dark-mode .wrapper {
+    background: rgba(28,28,28,0.95);
+    box-shadow: 0 12px 30px rgba(255,255,255,0.05);
+}
+
+/* Header */
+.upperCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    flex: 1;
+    text-align: center;
+    background: linear-gradient(90deg, #FF512F, #DD2476, #FDC830);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+/* Theme button */
+.theme-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #29bec9, #4d7fed);
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Date & Input Section */
+.dateSection,
+.inputSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    gap: 10px; /* space between label and input */
+}
+
+.dateSection label,
+.inputSection label {
+    flex: 0 0 120px; /* fixed width for labels */
+}
+
+/* Inputs */
+#inputHabit, #inputDate {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#inputHabit:focus, #inputDate:focus {
+    outline: none;
+    border: 2px solid #36D1DC;
+    box-shadow: 0 0 8px #36D1DC;
+}
+
+/* Add Button */
+#addBtn {
+    background: linear-gradient(45deg, #e77579, #da9988);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#addBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+#habitTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#habitTable th, #habitTable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    font-weight: bold;
+}
+
+#habitTable th {
+    background: linear-gradient(90deg, #26a0a9, #3e6bcd);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Habit items */
+td div {
+    background: linear-gradient(135deg, #FFD3B6, #FFAAA5);
+    padding: 8px 10px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Checkbox */
+td div input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 20px;
+    border-radius: 9px;
+    background: #eee;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #56ab2f, #a8e063);
+    text-align: right;
+    color: white;
+    border-radius: 9px;
+    transition: width 0.5s;
+}
+
+/* Chart */
+.chartSec {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.chartSec canvas {
+    width: 100% !important;
+    max-width: 600px;
+    height: 400px !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Reset Button */
+#resetBtn {
+    width: 100%;
+    margin-top: 25px;
+    background: linear-gradient(45deg, #FF6B6B, #C44D58);
+    color: #fff;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#resetBtn:hover {
+    transform: scale(1.03);
+}
+
+/* Dark mode adjustments */
+body.dark-mode h1 {
+    background: linear-gradient(90deg, #f0a7a7, #eddfa6);
+    -webkit-background-clip: text;
+}
+
+body.dark-mode table th {
+    background: linear-gradient(90deg, #36D1DC, #5B86E5);
+}
+
+body.dark-mode td div {
+    background: linear-gradient(135deg, #333, #444);
+    box-shadow: 0 4px 8px rgba(255,255,255,0.05);
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="date"] {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+body.dark-mode button {
+    background: rgba(0,255,255,0.2);
+    color: #00FFD5;
+}
+
+body.dark-mode #resetBtn {
+    background: linear-gradient(45deg, #FF6B6B, #C44D58);
+}
