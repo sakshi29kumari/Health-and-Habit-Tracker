@@ -7,7 +7,7 @@ A simple and interactive web application to help you build and track your daily 
 - Visualize progress using interactive charts (Chart.js)  
 - Toggle between Light & Dark mode  
 - Reset habits for a fresh start
-- 
+  
 ##Tech Stack  
 - Frontend:- React  
 - Charts:- Chart.js   
