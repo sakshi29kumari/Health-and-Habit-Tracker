@@ -9,5 +9,5 @@ A simple and interactive web application to help you build and track your daily 
 - Reset habits for a fresh start
 - 
 ##Tech Stack  
-- Frontend:- HTML, CSS, JavaScript  
+- Frontend:- React  
 - Charts:- Chart.js   
